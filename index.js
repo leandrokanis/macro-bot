@@ -127,16 +127,14 @@ function composeMessage(parsedData) {
 
 
   const messageIngredients = parsedData.likely_ingredients.map(ingredient => {
-    return `  • ${ingredient.name} (${ingredient.weight}g, ${ingredient.calories}kcal, ${ingredient.carbs}C, ${ingredient.protein}P, ${ingredient.fat}G)\n`;
+    return `• ${ingredient.name} (${ingredient.weight}g, ${ingredient.calories}kcal, ${ingredient.carbs}C, ${ingredient.protein}P, ${ingredient.fat}G)\n`;
   }).join('');
 
   return `${parsedData.recipe_name}:
 
   Ingredientes:
   ${messageIngredients}
-
   ${messageTotals}
   `;
-
 }
 
